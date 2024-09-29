@@ -1,0 +1,9 @@
+.custom-form-control .MuiInputLabel-outlined {
+	transform: translate(14px, 20px) scale(1);
+}
+
+.custom-form-control .MuiInputLabel-outlined.MuiInputLabel-shrink {
+	transform: translate(14px, -6px) scale(0.75);
+	background-color: white;
+	padding: 0 4px;
+}

@@ -1,0 +1,63 @@
+
+
+
+.task-section-container {
+    overflow-x: auto; /* Enables horizontal scrolling */
+    padding: 10px 0; /* Adds padding for the scrollable area */
+    position: relative; /* Needed for positioning the scrollbar */
+}
+
+.task-grid {
+    display: flex; /* Align items in a row */
+    gap: 20px; /* Space between cards */
+    flex-wrap: nowrap; /* Prevent wrapping to new lines */
+}
+
+.task-grid > div {
+    flex: 0 0 calc(25% - 20px); /* Display 4 cards at a time, adjust for gap */
+    box-sizing: border-box; /* Include padding and border in the element’s total width and height */
+    width: 100%; /* Ensure the cards take up the full width allocated */
+    max-width: 400px; /* Set a wider max-width for uniform card size */
+    height: 200px; /* Set a shorter height for uniform card size */
+    display: flex; /* Allow flex properties to apply */
+    flex-direction: column; /* Align children in a column */
+    position: relative; /* Needed for absolute positioning of child elements */
+}
+
+@media (max-width: 1200px) {
+    .task-grid > div {
+        flex: 0 0 calc(33.333% - 20px); /* Adjust for smaller screens */
+        max-width: 350px; /* Adjust max-width for smaller screens */
+        height: 180px; /* Adjust height for smaller screens */
+    }
+}
+
+@media (max-width: 900px) {
+    .task-grid > div {
+        flex: 0 0 calc(50% - 20px); /* Adjust for even smaller screens */
+        max-width: 300px; /* Adjust max-width for smaller screens */
+        height: 160px; /* Adjust height for smaller screens */
+    }
+}
+
+@media (max-width: 600px) {
+    .task-grid > div {
+        flex: 0 0 calc(100% - 20px); /* Display 1 card per row on small screens */
+        max-width: 250px; /* Adjust max-width for small screens */
+        height: 140px; /* Adjust height for small screens */
+    }
+}
+
+/* Optional: To ensure all input fields have consistent height */
+.custom-input {
+    height: 56px; /* same as h-14 in Tailwind */
+    padding: 12px;
+    font-size: 1.25rem; /* same as text-2xl in Tailwind */
+    border-radius: 0.75rem; /* same as rounded-xl in Tailwind */
+}
+
+.custom-button {
+    height: 56px; /* same as h-14 in Tailwind */
+}
+
+
